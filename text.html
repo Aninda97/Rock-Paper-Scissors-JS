@@ -1,1 +1,105 @@
-<script></script>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+    </head>
+    <body>
+
+<script>
+   
+
+function computerPlay ()
+{
+let RPS = [
+'Rock',
+'Paper',
+'Scissors',
+ ];
+
+return RPS =[Math.floor(Math.random() * Math.floor(3))];
+
+}
+
+
+
+
+function playRound (playerSelection, computerSelection)
+{
+let rockWin = 'Rock beats Scissors';
+let paperWin =  'Paper beats Rock';
+let scissorsWin = 'Scissors beats Paper';
+let draw = 'It\'s a draw!';
+let input = playerSelection.toLowerCase();
+let playerScore = 0;
+let computerScore = 0;
+
+    if (input === 'Rock' && computerSelection === 'Rock')
+    {
+    return draw;
+    } else if (input === 'Paper' && computerSelection === 'Paper')
+    {
+    return draw;
+    } else if (input === 'Scissors' && computerSelection === 'Scissors')
+    {   
+    return draw;
+    } else if (input === 'Rock' && computerSelection === 'Scissors')
+    {
+    return "You win! " + rockWin;
+    playerScore++;
+    } else if (input === 'Paper' && computerSelection === 'Rock')
+    {   
+    return "You win! " + paperWin;
+    playerScore++;
+    } else if (input === 'Scissors' && computerSelection === 'Paper')
+    {
+     return "You win! " + scissorsWin;
+     playerScore++;
+    } else if (input === 'Scissors' && computerSelection === 'Rock')
+    {
+     return "You lose! "+ rockWin;
+     computerScore++;
+    } else if (input === 'Rock' && computerSelection === 'Paper')
+    {
+    return "You lose! " + paperWin;
+    computerScore++;
+    } else if (input === 'Paper' && computerSelection === 'Scissors')
+    {
+    return "You lose! " + scissorsWin;
+    computerScore++;
+    }
+}
+
+console.log(playRound(playerSelection, computerSelection);
+
+function game () 
+{
+   let playerScore = 0;
+   let computerScore = 0;
+   
+
+  for (let i = 0, i < 5, i++)
+  {
+    let computerSelection = computerPlay;
+    let playerSelection = prompt "Rock, Paper or Scissors?";
+    if (playerScore > computerScore)
+      {
+    return "Yay! You win " + "Your score: " + playerScore + "Computer score: " computerScore;
+      } else if (playerScore < computerScore)
+      {
+   return "Oh no! Computer wins " + "Your score: " + playerScore + "Computer score: " computerScore;
+      } else if (playerScore ===computerScore)
+      {
+   return "Seems like a draw!" + "Your score: " + playerScore + "Computer score: " computerScore +     "Play again";
+      } else ()
+      {
+    return "Something went wrong";
+      }
+   }
+
+ }
+        </script>
+    </body>
+</html>
