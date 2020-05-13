@@ -65,7 +65,7 @@ function playRound(playerSelection, computerSelection) {
   } else if (input === 'Paper' && computerSelection === 'Scissors') {
     return "You lose! " + scissorsWin && computerScore++ && "\nYour Score: " + playerScore && "Computer Score: " + computerScore;
 
-  } else () {
+  } else{
     return "Something went Wrong";
     }
 }
@@ -75,7 +75,7 @@ function playRound(playerSelection, computerSelection) {
   function game()
   {
 
-    for ( i = 0, i < 5, i++ )
+    for ( i = 0; i < 5; i++)
     {
       i = playRound
     }
