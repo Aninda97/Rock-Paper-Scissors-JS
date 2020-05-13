@@ -33,8 +33,7 @@ function playRound(playerSelection, computerSelection) {
   let input = playerSelection.toLowerCase();
   let playerScore = 0;
   let computerScore = 0;
- computerSelection = computerPlay;
- playerSelection = prompt("Rock, Paper or Scissors?");
+ 
   
 
   //Rules of Game
@@ -77,7 +76,9 @@ function playRound(playerSelection, computerSelection) {
 
     for ( i = 0; i < 5; i++)
     {
-      i = playRound
+    i = playRound
+    computerSelection = computerPlay;
+	playerSelection = prompt("Rock, Paper or Scissors?");
     }
    }
         </script>
