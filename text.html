@@ -10,7 +10,7 @@
 
 <script>
    
-//Computer 
+//Computer to Play.
 function computerPlay() {
   let rpsArray = [
     'Rock',
@@ -18,8 +18,7 @@ function computerPlay() {
     'Scissors',
   ];
 
-  let rpsMath = rpsArray + [Math.floor(Math.random() * Math.floor(3))];
-  return rpsMath
+  return rpsArray[Math.floor(Math.random() * Math.floor(3))];
 }
 
 
@@ -36,14 +35,9 @@ function playRound(playerSelection, computerSelection) {
  
   
 
-  //Rules of Game
-  if (input === 'Rock' && computerSelection === 'Rock') {
-    return draw && "\nYour Score: " + playerScore && "Computer Score: " + computerScore;
-
-  } else if (input === 'Paper' && computerSelection === 'Paper') {
-    return draw && "\nYour Score: " + playerScore && "Computer Score: " + computerScore;
-
-  } else if (input === 'Scissors' && computerSelection === 'Scissors') {
+  //Rule && Scores of the Game
+  if (input === computerSelection) 
+  {
     return draw && "\nYour Score: " + playerScore && "Computer Score: " + computerScore;
 
   } else if (input === 'Rock' && computerSelection === 'Scissors') {
@@ -70,7 +64,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-  //5 Round Game 
+  //5 Round Game
   function game()
   {
 
